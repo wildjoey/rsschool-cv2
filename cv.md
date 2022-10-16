@@ -10,7 +10,20 @@ I work as a backend developer and want to improve my frontend knowledge to inter
 Now it is Java, but before that I had quite a lot of experience in C/C++ embedded development
 
 ### Code examples
-
+```Java
+@Configuration
+public class LifeconnectAnalyzerConfigJMS {
+    @Bean
+    public MessageConverter jacksonJmsMessageConverter(){
+        MappingJackson2MessageConverter converter =  
+                new MappingJackson2MessageConverter();
+        
+        converter.setTargetType(MessageType.TEXT);        
+        converter.setTypeIdPropertyName("_class_");
+        return converter;
+    }
+}
+```
 
 ### Work experience
 Several years as a developer of embedded software and digital devices, several years as a Java backend developer
